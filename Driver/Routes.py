@@ -101,7 +101,7 @@ def account():
     return render_template("account.html", title="Account", image_file=image_file, form=form)
 
 # Route for creating new posts, currently handles 5 ingredients.
-# TODO: Honestly, this - and the update_post routes are my worst work in this project. The code looks horrible, could work better, but it gets the work done for now. I'd also like to add markdown support for the text fields. 
+# TODO: Honestly, this - and the update_post routes are my worst work in this project. The code looks horrible, could work better, but it gets the work done for now. I'd also like to add markdown support for the text fields.
 @app.route("/post/new", methods=['GET', 'POST'])
 @login_required
 def new_post():
@@ -325,7 +325,7 @@ def reset_request():
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         send_reset_email(user)
-        flash("An email has been sent with instuctions to reset your password", "info")
+        flash("An email has been sent with instuctions to reset your password!", "info")
         return redirect(url_for('login'))
     return render_template("reset_request.html", title="Reset Password", form=form)
 
