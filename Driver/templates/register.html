@@ -65,14 +65,14 @@
             </fieldset>
 
             <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+                {{ form.submit(class="btn btn-outline-dark") }}
             </div>
 
         </form>
     </div>
     <div class="border-top pt-3">
-        <small class="text-muted">
-            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Click here to log in!</a>
+        <small class="">
+            Already Have An Account? <a class="ml-2 black-text" href="{{ url_for('login') }}">Click here to log in!</a>
         </small>
     </div>
 {% endblock content %}

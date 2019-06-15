@@ -11,17 +11,17 @@
           <a class="btn btn-secondary btn-sm mt-1 mb-1 float-right" href="{{ url_for('update_post', post_id=post.id) }}">Update</a>
           <button type="button" class="btn btn-danger btn-sm m-1 float-right" data-toggle="modal" data-target="#deleteModal">Delete</button>
       {% endif %}
-      <h1 class="article-title">{{ post.name }}</h1>
-      <p class="article-content text-muted"> Time to make: {{post.cook_time}} minutes </p>
-      <p class="article-content text-muted"> Cost per person: ${{post.price}}</p>
+      <h1 class="">{{ post.name }}</h1>
+      <p class="text-muted"> Time to make: {{post.cook_time}} minutes </p>
+      <p class="text-muted"> Cost per person: ${{post.price}}</p>
       <p class="article-content">{{ post.description }}</p>
-      <h3> Ingredients </h3>
+      <h3 class="subtitle"> Ingredients </h3>
       {% for ingredient in post.ingredients.split(', ') %}
-        <li class ="m-3"> {{ingredient}} </li>
+        <li class ="m-3 article-content"> {{ingredient}} </li>
       {% endfor %}
-      <h3 class="article-title"> Preperation </h3>
+      <h3 class="subtitle"> Preperation </h3>
       <p class="article-content"> {{post.preperation}} </p>
-      <h3 class="article-title"> Cooking </h3>
+      <h3 class="subtitle"> Cooking </h3>
       <p class="article-content"> {{post.cooking}} </p>
     </div>
   </article>
