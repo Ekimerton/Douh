@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4"> Create Ingredient </legend>
+      <div class="form-group">
+        {{ form.name.label(class="form-control-label") }}
+        {% if form.name.errors %}
+          {{ form.name(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.name.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{ form.name(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+      <div class = "form-row form-group">
+        <div class="form-group col-2">
+          {{ form.price.label(class="form-control-label") }}
+          {% if form.price.errors %}
+            {{ form.price(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.price.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.price(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+        <div class="form-group col-2">
+          {{ form.amount.label(class="form-control-label") }}
+          {% if form.amount.errors %}
+            {{ form.amount(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.amount.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.amount(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+        <div class="form-group col">
+          {{ form.unit.label(class="form-control-label") }}
+          {% if form.unit.errors %}
+            {{ form.unit(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.unit.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.unit(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+      </div>
+
+    </fieldset>
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  </form>
+</div>
+
+<legend class="border-bottom mb-4">  Ingredients of {{user.username }} ({{ posts.total }}) </legend>
+{% for post in posts.items %}
+  <article class="media content-section">
+    <div class="media-body">
+      <legend class="border-bottom">{{ post.name }}</legend>
+      <h5 class="text-muted"> ${{'%g'%post.price}} for 1 {{post.unit}} </h5>
+    </div>
+    <form action="{{ url_for('delete_ingredient', ingredient_id=post.id) }}" method="POST">
+      <input class="btn btn-danger m-4" type="submit" value="Delete">
+    </form>
+  </article>
+{% endfor %}
+
+{% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+  {% if page_num %}
+    {% if posts.page == page_num%}
+      <a class="btn btn-info mb-4" href="{{url_for('user_ingredients', username=user.username, page=page_num)}}"> {{page_num}} </a>
+    {% else %}
+      <a class="btn btn-outline-info mb-4" href="{{url_for('user_ingredients', username=user.username, page=page_num)}}"> {{page_num}} </a>
+    {% endif %}
+  {% else %}
+
+  {% endif %}
+{% endfor %}
+{% endblock content %}
