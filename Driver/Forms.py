@@ -62,18 +62,24 @@ class PostForm(FlaskForm):
 
     ingredient1 = SelectField('Ingredient', choices=[], validators=[InputRequired()])
     ingredient1_quantity = FloatField('Amount', validators=[InputRequired()])
-
     ingredient2 = SelectField('Ingredient', choices=[], validators=[Optional()])
     ingredient2_quantity = FloatField('Amount', validators=[Optional()])
-
     ingredient3 = SelectField('Ingredient', choices=[], validators=[Optional()])
     ingredient3_quantity = FloatField('Amount', validators=[Optional()])
-
     ingredient4 = SelectField('Ingredient', choices=[], validators=[Optional()])
     ingredient4_quantity = FloatField('Amount', validators=[Optional()])
-
     ingredient5 = SelectField('Ingredient', choices=[], validators=[Optional()])
     ingredient5_quantity = FloatField('Amount', validators=[Optional()])
+    ingredient6 = SelectField('Ingredient', choices=[], validators=[Optional()])
+    ingredient6_quantity = FloatField('Amount', validators=[Optional()])
+    ingredient7 = SelectField('Ingredient', choices=[], validators=[Optional()])
+    ingredient7_quantity = FloatField('Amount', validators=[Optional()])
+    ingredient8 = SelectField('Ingredient', choices=[], validators=[Optional()])
+    ingredient8_quantity = FloatField('Amount', validators=[Optional()])
+    ingredient9 = SelectField('Ingredient', choices=[], validators=[Optional()])
+    ingredient9_quantity = FloatField('Amount', validators=[Optional()])
+    ingredient10 = SelectField('Ingredient', choices=[], validators=[Optional()])
+    ingredient10_quantity = FloatField('Amount', validators=[Optional()])
 
     preperation = TextAreaField("Preperation Instuctions", validators=[DataRequired()])
     cooking = TextAreaField("Cooking Instuctions")

@@ -122,6 +122,11 @@ def new_post():
     form.ingredient3.choices = ingredient_list
     form.ingredient4.choices = ingredient_list
     form.ingredient5.choices = ingredient_list
+    form.ingredient6.choices = ingredient_list
+    form.ingredient7.choices = ingredient_list
+    form.ingredient8.choices = ingredient_list
+    form.ingredient9.choices = ingredient_list
+    form.ingredient10.choices = ingredient_list
 
     if form.validate_on_submit():
         ingredients_raw = str(form.ingredient1_quantity.data) + ":" + form.ingredient1.data
@@ -134,6 +139,16 @@ def new_post():
             ingredients_raw += ", " + str(form.ingredient4_quantity.data) + ":" + form.ingredient4.data
         if (form.ingredient5_quantity.data and form.ingredient5.data != "None"):
             ingredients_raw += ", " + str(form.ingredient5_quantity.data) + ":" + form.ingredient5.data
+        if (form.ingredient6_quantity.data and form.ingredient6.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient6_quantity.data) + ":" + form.ingredient6.data
+        if (form.ingredient7_quantity.data and form.ingredient7.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient7_quantity.data) + ":" + form.ingredient7.data
+        if (form.ingredient8_quantity.data and form.ingredient8.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient8_quantity.data) + ":" + form.ingredient8.data
+        if (form.ingredient9_quantity.data and form.ingredient9.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient9_quantity.data) + ":" + form.ingredient9.data
+        if (form.ingredient10_quantity.data and form.ingredient10.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient10_quantity.data) + ":" + form.ingredient10.data
 
         ingredients, price = calculatePrice(ingredients_raw)
         post = Recipe(name=form.title.data, cook_time=form.cook_time.data, num_of_people=form.people_count.data, description=form.description.data, author=current_user, ingredients=ingredients, ingredients_raw=ingredients_raw, preperation=form.preperation.data, cooking=form.cooking.data, price=round((price/form.people_count.data),2))
@@ -170,12 +185,18 @@ def update_post(post_id):
         ing_name = ingredientChoices.name + " ("  + ingredientChoices.unit + ")"
         ing_info = (ing_id, ing_name)
         ingredient_list.append(ing_info)
+
     # Setting ingredient field choises to the user's ingredients
     form.ingredient1.choices = ingredient_list
     form.ingredient2.choices = ingredient_list
     form.ingredient3.choices = ingredient_list
     form.ingredient4.choices = ingredient_list
     form.ingredient5.choices = ingredient_list
+    form.ingredient6.choices = ingredient_list
+    form.ingredient7.choices = ingredient_list
+    form.ingredient8.choices = ingredient_list
+    form.ingredient9.choices = ingredient_list
+    form.ingredient10.choices = ingredient_list
 
     if form.validate_on_submit():
         ingredients_raw = str(form.ingredient1_quantity.data) + ":" + form.ingredient1.data
@@ -188,6 +209,16 @@ def update_post(post_id):
             ingredients_raw += ", " + str(form.ingredient4_quantity.data) + ":" + form.ingredient4.data
         if (form.ingredient5_quantity.data and form.ingredient5.data != "None"):
             ingredients_raw += ", " + str(form.ingredient5_quantity.data) + ":" + form.ingredient5.data
+        if (form.ingredient6_quantity.data and form.ingredient6.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient6_quantity.data) + ":" + form.ingredient6.data
+        if (form.ingredient7_quantity.data and form.ingredient7.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient7_quantity.data) + ":" + form.ingredient7.data
+        if (form.ingredient8_quantity.data and form.ingredient8.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient8_quantity.data) + ":" + form.ingredient8.data
+        if (form.ingredient9_quantity.data and form.ingredient9.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient9_quantity.data) + ":" + form.ingredient9.data
+        if (form.ingredient10_quantity.data and form.ingredient10.data != "None"):
+            ingredients_raw += ", " + str(form.ingredient10_quantity.data) + ":" + form.ingredient10.data
 
         ingredients, price = calculatePrice(ingredients_raw)
 
@@ -220,6 +251,20 @@ def update_post(post_id):
                 form.ingredient4_quantity.data, form.ingredient4.data = ingredient_entries[3].split(":")
             if ingredient_entries[4]:
                 form.ingredient5_quantity.data, form.ingredient5.data = ingredient_entries[4].split(":")
+            if ingredient_entries[5]:
+                form.ingredient6_quantity.data, form.ingredient6.data = ingredient_entries[5].split(":")
+            if ingredient_entries[6]:
+                form.ingredient7_quantity.data, form.ingredient7.data = ingredient_entries[6].split(":")
+            if ingredient_entries[7]:
+                form.ingredient8_quantity.data, form.ingredient8.data = ingredient_entries[7].split(":")
+            if ingredient_entries[8]:
+                form.ingredient9_quantity.data, form.ingredient9.data = ingredient_entries[8].split(":")
+            if ingredient_entries[9]:
+                form.ingredient8_quantity.data, form.ingredient8.data = ingredient_entries[9].split(":")
+            if ingredient_entries[10]:
+                form.ingredient9_quantity.data, form.ingredient9.data = ingredient_entries[10].split(":")
+            if ingredient_entries[11]:
+                form.ingredient10_quantity.data, form.ingredient10.data = ingredient_entries[11].split(":")
         except:
             print("whoops")
 
