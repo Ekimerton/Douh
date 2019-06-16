@@ -145,7 +145,6 @@ def update_post(post_id):
         form.cook_time.data = post.cook_time
         form.people_count.data = post.num_of_people
         form.description.data = post.description
-        print("RAW ING:" + post.ingredients_raw)
         ingredient_entries = post.ingredients_raw.split(", ")
         form.ingredient1_quantity.data, form.ingredient1.data = ingredient_entries[0].split(":")
         try:

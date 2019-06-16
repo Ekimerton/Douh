@@ -27,8 +27,10 @@ def create_app(config_class=Config):
     from Driver.users.routes import users
     from Driver.posts.routes import posts
     from Driver.main.routes import main
+    from Driver.errors.handlers import errors
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)
+    app.register_blueprint(errors)
 
     return app

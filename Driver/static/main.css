@@ -8,6 +8,11 @@ a, h1, h2, h3, h4, h5, h6 {
   color: #000000;
 }
 
+.error-img {
+  height:auto;
+  width: 100%;
+}
+
 a:hover {
   color: #a7d129;
   text-decoration: none;
