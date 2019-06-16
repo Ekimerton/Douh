@@ -1,7 +1,7 @@
 import os
-from flask import Blueprint, render_template, url_for, flash, redirect, request
+from flask import Blueprint, render_template, url_for, flash, redirect, request, current_app
 from flask_login import login_user, current_user, logout_user, login_required
-from Driver import db, bcrypt, app
+from Driver import db, bcrypt
 from Driver.models import User, Recipe, Ingredient
 from Driver.users.forms import RegistrationForm, LoginForm, UpdateAccountForm, RequestResetForm, ResetPasswordForm
 from Driver.posts.forms import IngredientForm
@@ -58,7 +58,7 @@ def account():
     if form.validate_on_submit():
         if form.picture.data:
             if current_user.image_file != "default.jpg":
-                old_picture_path = os.path.join(app.root_path, 'static/profile_pics', current_user.image_file)
+                old_picture_path = os.path.join(current_app.root_path, 'static/profile_pics', current_user.image_file)
                 os.remove(old_picture_path)
 
             picture_file = save_picture(form.picture.data)
