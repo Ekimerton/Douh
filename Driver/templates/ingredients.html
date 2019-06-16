@@ -74,7 +74,7 @@
     <legend class="border-bottom">{{ post.name }}</legend>
     <h5 class="text-muted"> ${{'%g'%post.price}} for 1 {{post.unit}} </h5>
   </div>
-  <form action="{{ url_for('delete_ingredient', ingredient_id=post.id) }}" method="POST">
+  <form action="{{ url_for('users.delete_ingredient', ingredient_id=post.id) }}" method="POST">
     <input class="btn btn-danger m-4" type="submit" value="Delete">
   </form>
 </article>
@@ -83,9 +83,9 @@
 {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
   {% if page_num %}
     {% if posts.page == page_num%}
-    <a class="btn btn-dark mb-4" href="{{url_for('user_ingredients', username=user.username, page=page_num)}}"> {{page_num}} </a>
+    <a class="btn btn-dark mb-4" href="{{url_for('users.user_ingredients', username=user.username, page=page_num)}}"> {{page_num}} </a>
     {% else %}
-    <a class="btn btn-outline-dark mb-4" href="{{url_for('user_ingredients', username=user.username, page=page_num)}}"> {{page_num}} </a>
+    <a class="btn btn-outline-dark mb-4" href="{{url_for('users.user_ingredients', username=user.username, page=page_num)}}"> {{page_num}} </a>
     {% endif %}
   {% endif %}
 {% endfor %}

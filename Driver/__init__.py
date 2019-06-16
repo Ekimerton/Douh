@@ -14,7 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///douh.db"
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 
 # Reset mail login
@@ -25,4 +25,10 @@ app.config['MAIL_USERNAME'] = 'douh.reset@gmail.com'
 app.config['MAIL_PASSWORD'] = 'dough35461157$'
 mail = Mail(app)
 
-from Driver import Routes
+from Driver.users.routes import users
+from Driver.posts.routes import posts
+from Driver.main.routes import main
+
+app.register_blueprint(users)
+app.register_blueprint(posts)
+app.register_blueprint(main)
