@@ -6,7 +6,7 @@ from Driver.posts.forms import PostForm
 
 posts = Blueprint('posts', __name__)
 
-# Route for creating new posts, currently handles 5 ingredients.
+# Route for creating new posts, currently handles 10 ingredients.
 # TODO: Honestly, this - and the update_post routes are my worst work in this project. The code looks horrible, could work better, but it gets the work done for now. I'd also like to add markdown support for the text fields.
 @posts.route("/post/new", methods=['GET', 'POST'])
 @login_required
@@ -14,11 +14,11 @@ def new_post():
     form = PostForm()
     user = User.query.filter_by(username=current_user.username).first_or_404()
     posts = Ingredient.query.filter_by(author=user)\
-    .order_by(Ingredient.name.desc())
+    .order_by(Ingredient.id.desc())
     ingredient_list = []
     ingredient_list.append(("None", ""))
     for post in posts:
-        ing_id = post.name
+        ing_id = post.id
         ing_name = post.name + " ("  + post.unit + ")"
         ing_info = (ing_id, ing_name)
         ingredient_list.append(ing_info)
@@ -87,7 +87,7 @@ def update_post(post_id):
     ingredient_list = []
     ingredient_list.append(("None", ""))
     for ingredientChoices in posts:
-        ing_id = ingredientChoices.name
+        ing_id = str(ingredientChoices.id)
         ing_name = ingredientChoices.name + " ("  + ingredientChoices.unit + ")"
         ing_info = (ing_id, ing_name)
         ingredient_list.append(ing_info)
@@ -184,15 +184,15 @@ def calculatePrice(stri):
     total_price = 0
     pretty_string = ""
     for ingredient in stri.split(', '):
-        ingredient_quantity, ingredient_name = ingredient.split(':')
-        ing = Ingredient.query.filter_by(name=ingredient_name).first_or_404()
+        ingredient_quantity, ingredient_id = ingredient.split(':')
+        ing = Ingredient.query.filter_by(id=ingredient_id).first_or_404()
         price_of = float(ing.price) * float(ingredient_quantity)
         total_price += price_of
         price_str = str(round(price_of , 2))
         if ing.unit == "count":
-            pretty_string += ingredient_quantity + " " + ingredient_name + " - " + price_str + ", "
+            pretty_string += ingredient_quantity + " " + ing.name + " - " + price_str + ", "
         else:
-            pretty_string += ingredient_quantity + " " + ing.unit + " of " + ingredient_name + " - $" + price_str + ", "
+            pretty_string += ingredient_quantity + " " + ing.unit + " of " + ing.name + " - $" + price_str + ", "
 
     return (pretty_string[:len(pretty_string)-2], total_price)
 
