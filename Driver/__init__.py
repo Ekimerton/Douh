@@ -5,8 +5,6 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from Driver.config import Config
 
-from flaskext.markdown import Markdown
-
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
