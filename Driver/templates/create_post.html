@@ -6,7 +6,7 @@
     <fieldset class="form-group">
       <legend class="border-bottom mb-4"> {{legend}} </legend>
       <div class="form-group form-row">
-        <div class="form-group col">
+        <div class="from-group col">
           {{ form.title.label(class="form-control-label") }}
           {% if form.title.errors %}
           {{ form.title(class="form-control form-control-lg is-invalid") }}
@@ -19,7 +19,7 @@
           {{ form.title(class="form-control form-control-lg") }}
           {% endif %}
         </div>
-        <div class = "col-2">
+        <div class = "form-group col-2">
           {{ form.cook_time.label(class="form-control-label") }}
           {% if form.cook_time.errors %}
           {{ form.cook_time(class="form-control form-control-lg is-invalid") }}
@@ -32,7 +32,7 @@
           {{ form.cook_time(class="form-control form-control-lg") }}
           {% endif %}
         </div>
-        <div class = "col-2">
+        <div class = "form-group col-2">
           {{ form.people_count.label(class="form-control-label") }}
           {% if form.people_count.errors %}
           {{ form.people_count(class="form-control form-control-lg is-invalid") }}
