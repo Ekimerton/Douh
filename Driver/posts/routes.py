@@ -18,7 +18,7 @@ def new_post():
     ingredient_list = []
     ingredient_list.append(("None", ""))
     for post in posts:
-        ing_id = post.id
+        ing_id = str(post.id)
         ing_name = post.name + " ("  + post.unit + ")"
         ing_info = (ing_id, ing_name)
         ingredient_list.append(ing_info)
