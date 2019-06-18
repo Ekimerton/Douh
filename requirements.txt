@@ -7,3 +7,4 @@ itsdangerous==1.1.0
 Flask_Login==0.4.1
 Flask_Mail==0.9.1
 Pillow==6.0.0
+gunicorn==19.9.0
