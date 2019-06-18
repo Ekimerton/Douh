@@ -1,5 +1,5 @@
-from Driver import create_app
+from Driver import app
 
-app = create_app()
+app = app
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port = 80)
