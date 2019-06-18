@@ -11,3 +11,4 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = 'douh.reset@gmail.com'
     MAIL_PASSWORD = 'dough35461157$'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False

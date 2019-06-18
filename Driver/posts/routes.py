@@ -190,7 +190,7 @@ def calculatePrice(stri):
         total_price += price_of
         price_str = str(round(price_of , 2))
         if ing.unit == "count":
-            pretty_string += ingredient_quantity + " " + ing.name + " - " + price_str + ", "
+            pretty_string += ingredient_quantity + " " + ing.name + " - $" + price_str + ", "
         else:
             pretty_string += ingredient_quantity + " " + ing.unit + " of " + ing.name + " - $" + price_str + ", "
 
