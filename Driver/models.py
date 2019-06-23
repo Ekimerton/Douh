@@ -45,7 +45,7 @@ class Recipe(db.Model):
     ingredients = db.Column(db.String(200), nullable=False)
     preperation = db.Column(db.Text, nullable=False)
     cooking = db.Column(db.Text, nullable=False)
-    price = db.Column(db.Integer, nullable=False)
+    price = db.Column(db.Numeric, nullable=False)
 
 class Ingredient(db.Model):
     id = db.Column(db.Integer, primary_key = True)
