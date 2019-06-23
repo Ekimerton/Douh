@@ -21,8 +21,10 @@
       {% endfor %}
       <h3 class="subtitle"> Preperation </h3>
       <p class="article-content"> {{post.preperation}} </p>
-      <h3 class="subtitle"> Cooking </h3>
-      <p class="article-content"> {{post.cooking}} </p>
+      {% if post.cooking != "" %}
+        <h3 class="subtitle"> Cooking </h3>
+        <p class="article-content"> {{post.cooking}} </p>
+      {% endif %}
     </div>
   </article>
   <!-- Modal -->
