@@ -20,6 +20,8 @@ bcrypt.init_app(app)
 login_manager.init_app(app)
 mail.init_app(app)
 
+db.create_all()
+
 from Driver.users.routes import users
 from Driver.posts.routes import posts
 from Driver.main.routes import main
