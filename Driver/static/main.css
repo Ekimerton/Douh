@@ -9,7 +9,15 @@ a, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #708a2d
+  color: #194561
+}
+
+outside-block-link {
+  color: #aa7b48
+}
+
+outside-block-link:hover {
+  color: #f9fbfd
 }
 
 .outside-block {
