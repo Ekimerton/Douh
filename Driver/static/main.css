@@ -12,6 +12,10 @@ h1 {
   color: #708a2d
 }
 
+.outside-block {
+  color: #f9fbfd
+}
+
 .article-content {
   white-space: pre-line;
   color: #06070D

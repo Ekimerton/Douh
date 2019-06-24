@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h3 class="page-heading mb-4 "> Recipies by {{user.username }} ({{ posts.total }}) </h3>
+    <h3 class="page-heading mb-4 outside-block"> Recipies by {{user.username }} ({{ posts.total }}) </h3>
     {% for post in posts.items %}
         <article class="media content-section">
           <img class = "rounded-circle article-img" src="{{ url_for('static', filename="profile_pics/" + post.author.image_file) }}">
