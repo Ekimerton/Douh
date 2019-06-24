@@ -34,7 +34,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .site-header .navbar-nav .nav-link{
-  color: #b7bedb;
+  color: #f9fbfd;
 }
 
 .content-section {
@@ -75,7 +75,7 @@ a:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 3px solid #708a2d
+  border-bottom: 3px solid #aa7b48
 }
 
 .article-metadata a:hover {
