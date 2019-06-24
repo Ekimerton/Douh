@@ -41,10 +41,6 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
   color: #194561;
 }
 
-.article-title:hover, .subtitle:hover {
-  color: #b7bedb;
-}
-
 .site-header .navbar-nav .nav-link{
   color: #f9fbfd;
 }

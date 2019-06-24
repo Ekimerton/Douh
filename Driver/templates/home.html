@@ -8,7 +8,7 @@
               <a class="mr-2" href="{{url_for('users.user_recipes', username=post.author.username)}}">{{ post.author.username }}</a>
               <small class="text-muted">{{ post.date.strftime("%Y-%m-%d") }}</small>
             </div>
-            <h1><a class="" href="{{url_for("posts.post", post_id=post.id)}}">{{ post.name }}</a></h1>
+            <h1><a class="article-title" href="{{url_for("posts.post", post_id=post.id)}}">{{ post.name }}</a></h1>
             <p class="text-muted"> Time to make: {{post.cook_time}} minutes </p>
             <p class="text-muted"> Cost per person: ${{post.price}}</p>
             <p class="article-content">{{ post.description }}</p>
