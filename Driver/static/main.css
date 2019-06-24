@@ -5,11 +5,11 @@ body {
 }
 
 a, h2, h3, h4, h5, h6 {
-  color: #f9fbfd;
+  color: #06070D;
 }
 
 h1 {
-  color: #194561
+  color: #708a2d
 }
 
 .article-content {
@@ -38,7 +38,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .content-section {
-  background: #292c2d;
+  background: #f9fbfd;
   padding: 10px 20px;
   border: 1px solid #f9fbfd;
   border-radius: 3px;
