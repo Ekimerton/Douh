@@ -1,11 +1,15 @@
 body {
-  background: #978683;
+  background: #f0d2c0;
   color: #333333;
   margin-top: 5rem;
 }
 
-a, h1, h2, h3, h4, h5, h6 {
+a, h2, h3, h4, h5, h6 {
   color: #06070D;
+}
+
+h1 {
+  color: #aa7b48
 }
 
 .article-content {
@@ -14,29 +18,29 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 
 a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
-  color: #96C2E2;
+  color: #3a8799;
 }
 
 .bg-steel {
-  background-color: #194561;
+  background-color: #14272d;
 }
 
 .article-title, .subtitle {
-  color: #194561;
+  color: #14272d;
 }
 
 .article-title:hover, .subtitle:hover {
-  color: #96C2E2;
+  color: #3a8799;
 }
 
 .site-header .navbar-nav .nav-link{
-  color: #ECEBF0;
+  color: #f9fbfd;
 }
 
 .content-section {
-  background: #ECEBF0;
+  background: #f9fbfd;
   padding: 10px 20px;
-  border: 1px solid #ECEBF0;
+  border: 1px solid #f9fbfd;
   border-radius: 3px;
   margin-bottom: 20px;
 }
@@ -71,7 +75,7 @@ a:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 3px solid #194561
+  border-bottom: 3px solid #aa7b48
 }
 
 .article-metadata a:hover {
