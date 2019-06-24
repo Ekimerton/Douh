@@ -1,5 +1,5 @@
 body {
-  background: #181312;
+  background: #121011;
   color: #333333;
   margin-top: 5rem;
 }
@@ -9,7 +9,7 @@ a, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #aa7b48
+  color: #708a2d
 }
 
 .article-content {
@@ -22,7 +22,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .bg-steel {
-  background-color: #194561;
+  background-color: #38160e;
 }
 
 .article-title, .subtitle {
