@@ -1,42 +1,42 @@
 body {
-  background: #fc4c58;
+  background: #978683;
   color: #333333;
   margin-top: 5rem;
 }
 
 a, h1, h2, h3, h4, h5, h6 {
-  color: #000000;
+  color: #06070D;
 }
 
 .article-content {
   white-space: pre-line;
-  color: #000000
+  color: #06070D
 }
 
 a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
-  color: #fc4c58;
+  color: #96C2E2;
 }
 
 .bg-steel {
-  background-color: #d40a00;
+  background-color: #194561;
 }
 
 .article-title, .subtitle {
-  color: #d40a00;
+  color: #194561;
 }
 
 .article-title:hover, .subtitle:hover {
-  color: #fc4c58;
+  color: #96C2E2;
 }
 
 .site-header .navbar-nav .nav-link{
-  color: #f8fff4;
+  color: #ECEBF0;
 }
 
 .content-section {
-  background: #f8fff4;
+  background: #ECEBF0;
   padding: 10px 20px;
-  border: 1px solid #f8fff4;
+  border: 1px solid #ECEBF0;
   border-radius: 3px;
   margin-bottom: 20px;
 }
@@ -71,7 +71,7 @@ a:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 3px solid #d40a00
+  border-bottom: 3px solid #194561
 }
 
 .article-metadata a:hover {
