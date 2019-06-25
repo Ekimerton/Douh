@@ -7,11 +7,11 @@ from wtforms.validators import DataRequired, InputRequired, Optional
 class PostForm(FlaskForm):
     title = StringField("Title*", validators=[DataRequired()])
     description = TextAreaField("Description*", validators=[DataRequired()])
-    cook_time = IntegerField("Time*", validators=[DataRequired()])
+    cook_time = IntegerField("Time (minutes)*", validators=[DataRequired()])
     people_count = IntegerField("People*", validators=[DataRequired()])
 
-    ingredient1 = SelectField('Ingredient*', choices=[], validators=[InputRequired()])
-    ingredient1_quantity = FloatField('Amount*', validators=[InputRequired()])
+    ingredient1 = SelectField('Ingredient', choices=[], validators=[InputRequired()])
+    ingredient1_quantity = FloatField('Amount', validators=[InputRequired()])
     ingredient2 = SelectField('Ingredient', choices=[], validators=[Optional()])
     ingredient2_quantity = FloatField('Amount', validators=[Optional()])
     ingredient3 = SelectField('Ingredient', choices=[], validators=[Optional()])
@@ -36,6 +36,7 @@ class PostForm(FlaskForm):
     submit = SubmitField("Post")
 
     def validate_ingredient1(self, ingredient1):
+        print(ingredient1.data)
         if ingredient1.data == "None":
             raise ValidationError('You must add at least one ingredient!')
 
