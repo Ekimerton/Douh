@@ -36,7 +36,7 @@ class PostForm(FlaskForm):
     submit = SubmitField("Post")
 
     def validate_ingredient1(self, ingredient1):
-        if not ingredient1:
+        if ingredient1 == "None":
             raise ValidationError('You must add at least one ingredient!')
 
 # Summary: The form that is rendered with the ingredients.html. The unitTypes are stored in an array of tuples.
