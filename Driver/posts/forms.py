@@ -5,13 +5,13 @@ from wtforms.validators import DataRequired, InputRequired, Optional
 # Summary: The form for creating and updating posts.
 # TODO: This is once again, very disgusting. I'd rather use one FormField for each ingredient, but wtfoms won't let me create a FormField with SelectFields.
 class PostForm(FlaskForm):
-    title = StringField("Title", validators=[DataRequired()])
-    description = TextAreaField("Description", validators=[DataRequired()])
-    cook_time = IntegerField("Time", validators=[DataRequired()])
-    people_count = IntegerField("People", validators=[DataRequired()])
+    title = StringField("Title*", validators=[DataRequired()])
+    description = TextAreaField("Description*", validators=[DataRequired()])
+    cook_time = IntegerField("Time*", validators=[DataRequired()])
+    people_count = IntegerField("People*", validators=[DataRequired()])
 
-    ingredient1 = SelectField('Ingredient', choices=[], validators=[InputRequired()])
-    ingredient1_quantity = FloatField('Amount', validators=[InputRequired()])
+    ingredient1 = SelectField('Ingredient*', choices=[], validators=[InputRequired()])
+    ingredient1_quantity = FloatField('Amount*', validators=[InputRequired()])
     ingredient2 = SelectField('Ingredient', choices=[], validators=[Optional()])
     ingredient2_quantity = FloatField('Amount', validators=[Optional()])
     ingredient3 = SelectField('Ingredient', choices=[], validators=[Optional()])
@@ -31,7 +31,7 @@ class PostForm(FlaskForm):
     ingredient10 = SelectField('Ingredient', choices=[], validators=[Optional()])
     ingredient10_quantity = FloatField('Amount', validators=[Optional()])
 
-    preperation = TextAreaField("Preperation Instuctions", validators=[DataRequired()])
+    preperation = TextAreaField("Preperation Instuctions*", validators=[DataRequired()])
     cooking = TextAreaField("Cooking Instuctions")
     submit = SubmitField("Post")
 
