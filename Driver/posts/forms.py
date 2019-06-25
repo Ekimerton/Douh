@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField, SelectField, IntegerField, FloatField
-from wtforms.validators import DataRequired, InputRequired, Optional
+from wtforms.validators import DataRequired, InputRequired, Optional, ValidationError
 
 # Summary: The form for creating and updating posts.
 # TODO: This is once again, very disgusting. I'd rather use one FormField for each ingredient, but wtfoms won't let me create a FormField with SelectFields.
