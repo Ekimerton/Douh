@@ -19,7 +19,7 @@
           {{ form.title(class="form-control form-control-lg") }}
           {% endif %}
         </div>
-        <div class = "form-group col-2">
+        <div class = "form-group col-3">
           {{ form.cook_time.label(class="form-control-label") }}
           {% if form.cook_time.errors %}
           {{ form.cook_time(class="form-control form-control-lg is-invalid") }}
@@ -32,7 +32,7 @@
           {{ form.cook_time(class="form-control form-control-lg") }}
           {% endif %}
         </div>
-        <div class = "form-group col-2">
+        <div class = "form-group col-3">
           {{ form.people_count.label(class="form-control-label") }}
           {% if form.people_count.errors %}
           {{ form.people_count(class="form-control form-control-lg is-invalid") }}
@@ -65,7 +65,7 @@
       </div>
 
       <div class="form-group form-row">
-        <div class = "col-2">
+        <div class = "col-3">
           {{ form.ingredient1_quantity.label(class="form-control-label") }}
           {% if form.ingredient1_quantity.errors %}
           {{ form.ingredient1_quantity(class="form-control form-control-lg is-invalid") }}
