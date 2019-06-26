@@ -3,3 +3,11 @@ body {
   color: #333333;
   margin-top: 5rem;
 }
+
+h1 {
+  color: #ffffff;
+}
+
+.well {
+border-style:solid;
+}
