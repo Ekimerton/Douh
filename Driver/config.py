@@ -15,3 +15,8 @@ class Config:
     MAIL_USE_TLS = os.environ['MAIL_USE_TLS']
     MAIL_USERNAME = os.environ['MAIL_USERNAME']
     MAIL_PASSWORD = os.environ['MAIL_PASSWORD']
+
+    # AWS & S3
+    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+    S3_BUCKET_NAME = os.environ['S3_BUCKET_NAME']
