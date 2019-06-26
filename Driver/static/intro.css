@@ -5,9 +5,10 @@ body {
 }
 
 h1 {
-  color: #ffffff;
+  color: #f9fbfd;
 }
 
-.well {
-border-style:solid;
+.content-block {
+  background: #f9fbfd;
+  color: #181312;
 }
