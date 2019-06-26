@@ -6,6 +6,9 @@ main = Blueprint('main', __name__)
 # Summary: The default page. Shows everyone's posts, sorted by date so the newest posts show first. Paginated so 5 posts show per page.
 # TODO: Nothing.
 @main.route("/")
+def intro():
+    return render_template("intro.html")
+
 @main.route("/home")
 def home():
     page = request.args.get("page", 1, type=int)
