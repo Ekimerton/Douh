@@ -119,15 +119,13 @@
             </div>
         </div>
         <a class="btn btn-light btn-lg btn-block mb-3 mt-5" href="{{ url_for('users.register') }}" role="button">Register</a>
-        <a class="btn btn-secondary btn-lg btn-block mt-3" href="{{ url_for('users.login') }}" role="button">Login</a>
-        <a class="btn btn-secondary btn-lg btn-block mt-3" href="{{ url_for('main.home') }}" role="button">Browse</a>
+        <a class="btn btn-secondary btn-lg btn-block mt-3 mb-3" href="{{ url_for('users.login') }}" role="button">Login</a>
+        <a class="btn btn-secondary btn-lg btn-block mt-3 mb-3" href="{{ url_for('main.home') }}" role="button">Browse</a>
       </div>
     </section>
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="slick/slick.min.js"></script>
-    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.singlePageNav.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script>
 
       function getOffSet(){
