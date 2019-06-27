@@ -1,34 +1,276 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='intro.css') }}">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>douh</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
-<body>
-  <h1 class="text-center m-4"> douh </h1>
-  <div class="jumbotron">
-  <h2>Hello, world!</h2>
-  <p>blah blah blah</p>
-    <div class="row"><a class="btn btn-primary btn-lg col m-4" href="#intro" role="button">Introduction</a><a class="btn btn-primary btn-lg col m-4" href="#" role="button">Quick Start</a>
-    </div>
-  </div>
-<div class="content-block">
-  <h3 id="intro">Introduction</h3>
-  <p> nice intro bro </p>
-</div>
+    <link rel="stylesheet" href="{{ url_for('fontawesome-5.5', filename='css/all.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='intro.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Hero section -->
+    <section id="hero" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+        <div class="container">
+          <div class="tm-next">
+              <a href="#hero" class="navbar-brand">douh</a>
+          </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-link tm-nav-link" href="#introduction">Introduction</a>
+              <a class="nav-link tm-nav-link" href="#work">Contact</a>
+              <a class="nav-link tm-nav-link" href="#contact">Get Started</a>
+            </div>
+            <div class="navbar-nav">
+              <a class="nav-link tm-nav-link" href="#contact">Register</a>
+              <a class="nav-link tm-nav-link" href="#contact">Login</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">douh</h2>
+            <p class="tm-hero-subtitle">
+              A <strong> simple </strong> system for managing recipes
+            </p>
+        </div>
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#introduction" class="text-center tm-down-arrow-link">
+           <p><i class="arrow-down"></i></p>
+        </a>
+      </div>
+    </section>
+
+    <section id="introduction" class="tm-section-pad-top">
+      <div class="container">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary tm-section-title mb-4 text-center">Introduction</h2>
+                <p class="mb-4 tm-intro-text">
+                  <strong> Douh </strong> was created as a side project so I could get more comfortable with backend web development, and because I needed a place to store my recipes!
+                </br>
+                </br>
+                  The backend is written in Python using Flask, and the frontend is made with Bootstrap and jQuery. PostgreSQL is used for data storage, and the whole project is hosted on Heroku. For a complete list of dependcies; check out my repo: <a href="google.com"> douh </a>
+              </p>
+              <h3 class="tm-text-primary">
+                Quick Start Guide
+              </h3>
+              <p>
+                Once you make an account on douh, you will be able to add <strong> recipes </strong> and <strong> ingredients </strong> to your account. Ingredients are accessed from <i> My Ingredients </i> and recipes are accessed from <i> My Recipes </i>.
+              <p>
+              <h4 class="tm-text-primary">
+                Ingredients
+              </h4>
+              <p>
+                The first thing you should create should be an ingredient. Ingredients are entered in a format such as this:
+              </p>
+              <p>
+                I buy <strong>[quantity] [unit] </strong> of <strong>[name]</strong> for <strong>[price]</strong>
+              </p>
+              <p>
+                As you can imagine, Ingredients are the building blocks of recipes.
+              </p>
+              <h4 class="tm-text-primary">
+                Recipes
+              </h4>
+              <p> Once you have a few ingredients, you can go on to create your first recipe. </p>
+              <p> Once the form is submitted, the recipe is posted on <strong> Home </strong>, as well as your <strong> My Recipes </strong>. When browsing on Home clicking on the username above someone else's will take you to that person's My Recipes. </p>
+            </br>
+            </div>
+
+      </div>
+    </section>
+    <section id="work" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Contact</h2>
+              <p> Author: Ekim Karabey </p>
+              <ul class="icons">
+							<li><a href="https://github.com/Ekimerton" class="icon style2 fa-github tm-button"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ekim-karabey-b94098175" class="icon style2 fa-linkedin tm-button"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.instagram.com/ekimerton/" class="icon style2 fa-instagram tm-button"><span class="label">Instagram</span></a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+      <div class="container tm-container-contact">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4 tm-section-title">Get Started</h2>
+                <div class="mb-5 tm-underline">
+                  <div class="tm-underline-inner"></div>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-light btn-lg btn-block mb-3 mt-5" href="#" role="button">Register</a>
+        <a class="btn btn-secondary btn-lg btn-block mt-3" href="#" role="button">Login</a>
+      </div>
+    </section>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        }
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        $(window).scroll(function(){
+          var firstTop = $object.offset().top,
+              pos = $(window).scrollTop(),
+              yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+          var bg_css = 'center ' + yPos + 'px';
+
+          $object.css({"background-position" : bg_css });
+        });
+      };
+
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);
+
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+
+        // Close mobile menu after click
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show');
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav();
+
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 400, function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
   </body>
 </html>
