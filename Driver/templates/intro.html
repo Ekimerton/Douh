@@ -30,8 +30,8 @@
               <a class="nav-link tm-nav-link" href="#contact">Get Started</a>
             </div>
             <div class="navbar-nav">
-              <a class="nav-link tm-nav-link" href="#contact">Register</a>
-              <a class="nav-link tm-nav-link" href="#contact">Login</a>
+              <a class="nav-link tm-nav-link" href="{{ url_for('users.register') }}">Register</a>
+              <a class="nav-link tm-nav-link" href="{{ url_for('users.login') }}">Login</a>
             </div>
           </div>
         </div>
@@ -118,8 +118,9 @@
                 </div>
             </div>
         </div>
-        <a class="btn btn-light btn-lg btn-block mb-3 mt-5" href="#" role="button">Register</a>
-        <a class="btn btn-secondary btn-lg btn-block mt-3" href="#" role="button">Login</a>
+        <a class="btn btn-light btn-lg btn-block mb-3 mt-5" href="{{ url_for('users.register') }}" role="button">Register</a>
+        <a class="btn btn-secondary btn-lg btn-block mt-3" href="{{ url_for('users.login') }}" role="button">Login</a>
+        <a class="btn btn-secondary btn-lg btn-block mt-3" href="{{ url_for('main.home') }}" role="button">Browse</a>
       </div>
     </section>
     <script src="js/jquery-1.9.1.min.js"></script>
