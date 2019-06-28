@@ -108,7 +108,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+    <section id="contact" class="tm-section-pad-top tm-parallax">
       <div class="container tm-container-contact">
         <div class="row">
             <div class="col-12">
@@ -165,7 +165,7 @@
         multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
         multiplier = 1 - multiplier;
         var $doc = $(document);
-        $object.css({"background-attatchment" : "fixed"});
+        // $object.css({"background-attatchment" : "fixed"});
 
         if(forceSet) {
           setParallaxPosition($doc, multiplier, $object);
