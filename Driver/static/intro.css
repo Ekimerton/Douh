@@ -6,7 +6,15 @@ body {
   color: #8f8f8f;
   margin: 0;
   padding: 0;
-  overflow:hidden;
+  overflow-x: hidden;
+}
+
+.element {
+  overflow: -moz-scrollbars-none;
+}
+
+::-webkit-scrollbar {
+display: none;
 }
 
 strong {
