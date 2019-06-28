@@ -119,13 +119,13 @@
             </div>
         </div>
         <div class="col text-center">
-          <a class="btn btn-light btn-lg mb-3 mt-5" href="{{ url_for('users.register') }}" role="button">Register</a>
+          <a class="btn btn-light btn-lg mb-3 mt-5 col" href="{{ url_for('users.register') }}" role="button">Register</a>
         </div>
         <div class="col text-center">
-          <a class="btn btn-secondary btn-lg mt-3 mb-3" href="{{ url_for('users.login') }}" role="button">Login</a>
+          <a class="btn btn-secondary btn-lg mt-3 mb-3 col" href="{{ url_for('users.login') }}" role="button">Login</a>
         </div>
         <div class="col text-center">
-          <a class="btn btn-secondary btn-lg mt-3 mb-3" href="{{ url_for('main.home') }}" role="button">Browse</a>
+          <a class="btn btn-secondary btn-lg mt-3 mb-3 col" href="{{ url_for('main.home') }}" role="button">Browse</a>
         </div>
       </div>
     </div>
@@ -152,7 +152,6 @@
         return _offset;
       }
 
-      /*
       function setParallaxPosition($doc, multiplier, $object){
         var offset = getOffSet();
         var from_top = $doc.scrollTop(),
@@ -162,6 +161,7 @@
 
       // Parallax function
       // Adapted based on https://codepen.io/roborich/pen/wpAsm
+      /*
       var background_image_parallax = function($object, multiplier, forceSet){
         multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
         multiplier = 1 - multiplier;
@@ -193,6 +193,7 @@
         });
       };
       */
+
       $(function(){
         // Hero Section - Background Parallax
         background_image_parallax($(".tm-parallax"), 0.30, false);
