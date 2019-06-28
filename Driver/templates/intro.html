@@ -125,9 +125,9 @@
         </div>
       </div>
     </section>
-    <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script> -->
     <script>
 
       function getOffSet(){
@@ -147,7 +147,6 @@
         return _offset;
       }
 
-      /*
       function setParallaxPosition($doc, multiplier, $object){
         var offset = getOffSet();
         var from_top = $doc.scrollTop(),
@@ -187,7 +186,7 @@
           $object.css({"background-position" : bg_css });
         });
       };
-      */
+
       $(function(){
         // Hero Section - Background Parallax
         background_image_parallax($(".tm-parallax"), 0.30, false);
@@ -227,5 +226,52 @@
             });
           } // End if
         });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
   </body>
 </html>
