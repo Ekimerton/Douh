@@ -119,9 +119,13 @@
             </div>
         </div>
         <div class="col text-center">
-          <a class="btn btn-light btn-lg mb-3 mt-5" href="{{ url_for('users.register') }}" role="button">Register</a>
-          <a class="btn btn-secondary btn-lg mt-3 mb-3" href="{{ url_for('users.login') }}" role="button">Login</a>
-          <a class="btn btn-secondary btn-lg mt-3 mb-3" href="{{ url_for('main.home') }}" role="button">Browse</a>
+          <a class="btn btn-light btn-lg mb-3 mt-5 col" href="{{ url_for('users.register') }}" role="button">Register</a>
+        </div>
+        <div class="col text-center">
+          <a class="btn btn-secondary btn-lg mt-3 mb-3 col" href="{{ url_for('users.login') }}" role="button">Login</a>
+        </div>
+        <div class="col text-center">
+          <a class="btn btn-secondary btn-lg mt-3 mb-3 col" href="{{ url_for('main.home') }}" role="button">Browse</a>
         </div>
       </div>
     </section>
