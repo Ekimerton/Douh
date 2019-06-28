@@ -428,8 +428,8 @@ figure.effect-honey:hover h2 i {
   background-image: url(../static/img/bg-bottom.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
-  height: 100vh;
-  min-height: 850px;
+  height: 95vh;
+  min-height: 375px;
   position: bottom;
 }
 
