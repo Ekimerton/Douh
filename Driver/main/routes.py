@@ -6,6 +6,7 @@ main = Blueprint('main', __name__)
 # Summary: The default page. Shows everyone's posts, sorted by date so the newest posts show first. Paginated so 5 posts show per page.
 # TODO: Nothing.
 @main.route("/")
+@main.route("/about")
 def intro():
     return render_template("intro.html")
 
@@ -17,6 +18,6 @@ def home():
 
 # Summary: A static about page.
 # TODO: Fill it with actual content.
-@main.route("/about")
+@main.route("/lol")
 def about():
-    return render_template('about.html', title='About')
+    return render_template('about.html', title='Emptylol')
