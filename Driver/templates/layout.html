@@ -36,7 +36,7 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{{ url_for('main.home') }}">Home</a>
-              <a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
+              <a class="nav-item nav-link" href="{{ url_for('main.intro') }}">About</a>
               {% if current_user.is_authenticated %}
                 <a class="nav-item nav-link" href="{{url_for('users.user_recipes', username=current_user.username)}}">My Recipies</a>
                 <a class="nav-item nav-link" href="{{   url_for('users.user_ingredients', username=current_user.username) }}">My Ingredients</a>
