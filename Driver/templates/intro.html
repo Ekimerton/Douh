@@ -1,234 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>douh</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-5.5/css/all.min.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='intro.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <!-- Hero section -->
-    <section id="hero" class="text-white tm-font-big tm-parallax">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-md tm-navbar">
-        <div class="container">
-          <div class="tm-next">
-              <a href="#hero" class="navbar-brand">douh</a>
-          </div>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars navbar-toggler-icon"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-            <div class="navbar-nav mr-auto" id="tmNav">
-              <a class="nav-link tm-nav-link" href="#introduction">Introduction</a>
-              <a class="nav-link tm-nav-link" href="#work">Contact</a>
-              <a class="nav-link tm-nav-link" href="#contact">Get Started</a>
-            </div>
-            <div class="navbar-nav">
-              <a class="nav-link tm-nav-link" href="/register">Register</a>
-              <a class="nav-link tm-nav-link" href="/login">Login</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <div class="text-center tm-hero-text-container">
-        <div class="tm-hero-text-container-inner">
-            <h2 class="tm-hero-title">douh</h2>
-            <p class="tm-hero-subtitle">
-              A <strong> simple </strong> system for managing recipes
-            </p>
-        </div>
-      </div>
-
-      <div class="tm-next tm-intro-next">
-        <a href="#introduction" class="text-center tm-down-arrow-link">
-           <p><i class="arrow-down"></i></p>
-        </a>
-      </div>
-    </section>
-
-    <section id="introduction" class="tm-section-pad-top">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>douh</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-5.5/css/all.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='intro.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Hero section -->
+  <section id="hero" class="text-white tm-font-big tm-parallax">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md tm-navbar">
       <div class="container">
-            <div class="tm-intro-text-container">
-                <h2 class="tm-text-primary tm-section-title mb-4 text-center">Introduction</h2>
-                <p class="mb-4 tm-intro-text">
-                  <strong> Douh </strong> was created as a side project so I could get more comfortable with backend web development, and because I needed a place to store my recipes!
-                </br>
-                </br>
-                  The backend is written in Python using Flask, and the frontend is made with Bootstrap and jQuery. PostgreSQL is used for data storage, and the whole project is hosted on Heroku. For a complete list of dependcies; check out my repo: <a href="https://github.com/Ekimerton/Douh"> douh </a>
-              </p>
-              <h3 class="tm-text-primary">
-                Quick Start Guide
-              </h3>
-              <p>
-                Once you make an account on douh, you will be able to add <strong> recipes </strong> and <strong> ingredients </strong> to your account. Ingredients are accessed from <i> My Ingredients </i> and recipes are accessed from <i> My Recipes </i>.
-              <p>
-              <h4 class="tm-text-primary">
-                Ingredients
-              </h4>
-              <p>
-                The first thing you should create should be an ingredient. Ingredients are entered in a format such as this:
-              </p>
-              <p>
-                I buy <strong>[quantity] [unit] </strong> of <strong>[name]</strong> for <strong>[price]</strong>
-              </p>
-              <p>
-                As you can imagine, Ingredients are the building blocks of recipes.
-              </p>
-              <h4 class="tm-text-primary">
-                Recipes
-              </h4>
-              <p> Once you have a few ingredients, you can go on to create your first recipe. </p>
-              <p> Once the form is submitted, the recipe is posted on <strong> Home </strong>, as well as your <strong> My Recipes </strong>. When browsing on Home clicking on the username above someone else's will take you to that person's My Recipes. </p>
-            </br>
-            </div>
+        <div class="tm-next">
+          <a href="#hero" class="navbar-brand">douh</a>
+        </div>
 
-      </div>
-    </section>
-    <section id="work" class="tm-section-pad-top">
-      <div class="container tm-container-gallery">
-        <div class="row">
-          <div class="text-center col-12">
-              <h2 class="tm-text-primary tm-section-title mb-4">Contact</h2>
-              <p> Author: <strong> Ekim Karabey </strong> </p>
-              <ul class="icons">
-							<li><a href="https://github.com/Ekimerton" class="icon style2 fa-github tm-button"><span class="label">Github</span></a></li>
-							<li><a href="https://www.linkedin.com/in/ekim-karabey-b94098175" class="icon style2 fa-linkedin tm-button"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://www.instagram.com/ekimerton/" class="icon style2 fa-instagram tm-button"><span class="label">Instagram</span></a></li>
-              </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <div class="navbar-nav mr-auto" id="tmNav">
+            <a class="nav-link tm-nav-link" href="#introduction">Introduction</a>
+            <a class="nav-link tm-nav-link" href="#work">Quick Start Guide</a>
+            <a class="nav-link tm-nav-link" href="#contact">Get Started</a>
+          </div>
+          <div class="navbar-nav">
+            <a class="nav-link tm-nav-link" href="/register">Register</a>
+            <a class="nav-link tm-nav-link" href="/login">Login</a>
           </div>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <!-- Contact -->
-    <section id="contact" class="tm-section-pad-top tm-parallax-2">
-      <div class="container tm-container-contact">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="tm-text-primary tm-section-title mb-4 text-center">Get Started</h2>
-                <div class="mb-5 tm-underline">
-                  <div class="tm-underline-inner"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center mt-5">
-          <a class="btn btn-light btn-lg m-4 col" href="{{ url_for('users.register') }}" role="button">Register</a>
-          <a class="btn btn-dark btn-lg m-4 col" href="{{ url_for('users.login') }}" role="button">Login</a>
-        </div>
-        <div class="col text-center">
-          <a class="btn btn-dark btn-lg mt-3 mb-3 col" href="{{ url_for('main.home') }}" role="button">Browse</a>
+    <div class="text-center tm-hero-text-container">
+      <div class="tm-hero-text-container-inner">
+        <h2 class="tm-hero-title">douh</h2>
+        <p class="tm-hero-subtitle">
+          A <strong> simple </strong> system for managing recipes
+        </p>
+      </div>
+    </div>
+
+    <div class="tm-next tm-intro-next">
+      <a href="#introduction" class="text-center tm-down-arrow-link">
+        <p><i class="arrow-down"></i></p>
+      </a>
+    </div>
+  </section>
+
+  <section id="introduction" class="tm-section-pad-top">
+    <div class="container">
+      <div class="tm-intro-text-container">
+        <h2 class="tm-text-primary tm-section-title mb-4 text-center">Introduction</h2>
+        <p class="mb-4 tm-intro-text">
+          <strong> Douh </strong> was created as a side project so I could get more comfortable with backend web development, and because I needed a place to store my recipes!
+        </br>
+      </br>
+      The backend is written in Python using Flask, and the frontend is made with Bootstrap and jQuery. PostgreSQL is used for data storage, and the whole project is hosted on Heroku. For a complete list of dependcies; check out my repo: <a href="https://github.com/Ekimerton/Douh"> douh </a>
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-12">
+          <h2 class="tm-text-primary tm-section-title mb-4">Contact</h2>
+          <p> Author: <strong> Ekim Karabey </strong> </p>
+          <ul class="icons">
+            <li><a href="https://github.com/Ekimerton" class="icon style2 fa-github tm-button"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/ekim-karabey-b94098175" class="icon style2 fa-linkedin tm-button"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com/ekimerton/" class="icon style2 fa-instagram tm-button"><span class="label">Instagram</span></a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    <script>
+    </div>
+  </div>
 
-      function getOffSet(){
-        var _offset = 450;
-        var windowHeight = window.innerHeight;
+</div>
+</section>
+<section id="work" class="tm-section-pad-top">
+  <h2 class="tm-text-primary tm-section-title mb-4 text-center">
+    Quick Start Guide
+  </h2>
+  <p>
+    Once you make an account on douh, you will be able to add <strong> recipes </strong> and <strong> ingredients </strong> to your account. Ingredients are accessed from <i> My Ingredients </i> and recipes are accessed from <i> My Recipes </i>.
+    <p>
+      <h4 class="tm-text-primary">
+        Ingredients
+      </h4>
+      <p>
+        The first thing you should create should be an ingredient. Ingredients are entered in a format such as this:
+      </p>
+      <p>
+        I buy <strong>[quantity] [unit] </strong> of <strong>[name]</strong> for <strong>[price]</strong>
+      </p>
+      <p>
+        As you can imagine, Ingredients are the building blocks of recipes.
+      </p>
+      <h4 class="tm-text-primary">
+        Recipes
+      </h4>
+      <p> Once you have a few ingredients, you can go on to create your first recipe. </p>
+      <p> Once the form is submitted, the recipe is posted on <strong> Home </strong>, as well as your <strong> My Recipes </strong>. When browsing on Home clicking on the username above someone else's will take you to that person's My Recipes. </p>
+    </br>
+  </section>
 
-        if(windowHeight > 500) {
-          _offset = 400;
-        }
-        if(windowHeight > 680) {
-          _offset = 300
-        }
-        if(windowHeight > 830) {
-          _offset = 210;
-        }
+  <!-- Contact -->
+  <section id="contact" class="tm-section-pad-top tm-parallax-2">
+    <div class="container tm-container-contact">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="tm-text-primary tm-section-title mb-4 text-center">Get Started</h2>
+          <div class="mb-5 tm-underline">
+            <div class="tm-underline-inner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center mt-5">
+        <a class="btn btn-light btn-lg m-4 col" href="{{ url_for('users.register') }}" role="button">Register</a>
+        <a class="btn btn-dark btn-lg m-4 col" href="{{ url_for('users.login') }}" role="button">Login</a>
+      </div>
+      <div class="col text-center">
+        <a class="btn btn-dark btn-lg mt-3 mb-3 col" href="{{ url_for('main.home') }}" role="button">Browse</a>
+      </div>
+    </div>
+  </section>
+  <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script>
 
-        return _offset;
-      }
+  function getOffSet(){
+    var _offset = 450;
+    var windowHeight = window.innerHeight;
 
-      function setParallaxPosition($doc, multiplier, $object){
-        var offset = getOffSet();
-        var from_top = $doc.scrollTop(),
-          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
-        $object.css({"background-position" : bg_css });
-      }
+    if(windowHeight > 500) {
+      _offset = 400;
+    }
+    if(windowHeight > 680) {
+      _offset = 300
+    }
+    if(windowHeight > 830) {
+      _offset = 210;
+    }
 
-      // Parallax function
-      // Adapted based on https://codepen.io/roborich/pen/wpAsm
-      var background_image_parallax = function($object, multiplier, forceSet){
-        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-        multiplier = 1 - multiplier;
-        var $doc = $(document);
-        // $object.css({"background-attatchment" : "fixed"});
+    return _offset;
+  }
 
-        if(forceSet) {
-          setParallaxPosition($doc, multiplier, $object);
-        } else {
-          $(window).scroll(function(){
-            setParallaxPosition($doc, multiplier, $object);
-          });
-        }
-      };
+  function setParallaxPosition($doc, multiplier, $object){
+    var offset = getOffSet();
+    var from_top = $doc.scrollTop(),
+    bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+    $object.css({"background-position" : bg_css });
+  }
 
-      var background_image_parallax_2 = function($object, multiplier){
-        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-        multiplier = 1 - multiplier;
-        var $doc = $(document);
-        $object.css({"background-attachment" : "fixed"});
-        $(window).scroll(function(){
-          var firstTop = $object.offset().top,
-              pos = $(window).scrollTop(),
-              yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+  // Parallax function
+  // Adapted based on https://codepen.io/roborich/pen/wpAsm
+  var background_image_parallax = function($object, multiplier, forceSet){
+    multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+    multiplier = 1 - multiplier;
+    var $doc = $(document);
+    // $object.css({"background-attatchment" : "fixed"});
 
-          var bg_css = 'center ' + yPos + 'px';
-
-          $object.css({"background-position" : bg_css });
-        });
-      };
-
-      $(function(){
-        // Hero Section - Background Parallax
-        background_image_parallax($(".tm-parallax"), 0.30, false);
-        background_image_parallax_2($("#contact"), 0.80);
-
-        // Handle window resize
-        window.addEventListener('resize', function(){
-          background_image_parallax($(".tm-parallax"), 0.30, true);
-        }, true);
-
-        // Detect window scroll and update navbar
-        $(window).scroll(function(e){
-          if($(document).scrollTop() > 120) {
-            $('.tm-navbar').addClass("scroll");
-          } else {
-            $('.tm-navbar').removeClass("scroll");
-          }
-        });
-
-        // Close mobile menu after click
-        $('#tmNav a').on('click', function(){
-          $('.navbar-collapse').removeClass('show');
-        })
-
-        // Scroll to corresponding section with animation
-        $('#tmNav').singlePageNav();
-
-        $("a").on('click', function(event) {
-          if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 400, function(){
-              window.location.hash = hash;
-            });
-          } // End if
-        });
+    if(forceSet) {
+      setParallaxPosition($doc, multiplier, $object);
+    } else {
+      $(window).scroll(function(){
+        setParallaxPosition($doc, multiplier, $object);
       });
-    </script>
-  </body>
+    }
+  };
+
+  var background_image_parallax_2 = function($object, multiplier){
+    multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+    multiplier = 1 - multiplier;
+    var $doc = $(document);
+    $object.css({"background-attachment" : "fixed"});
+    $(window).scroll(function(){
+      var firstTop = $object.offset().top,
+      pos = $(window).scrollTop(),
+      yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+      var bg_css = 'center ' + yPos + 'px';
+
+      $object.css({"background-position" : bg_css });
+    });
+  };
+
+  $(function(){
+    // Hero Section - Background Parallax
+    background_image_parallax($(".tm-parallax"), 0.30, false);
+    background_image_parallax_2($("#contact"), 0.80);
+
+    // Handle window resize
+    window.addEventListener('resize', function(){
+      background_image_parallax($(".tm-parallax"), 0.30, true);
+    }, true);
+
+    // Detect window scroll and update navbar
+    $(window).scroll(function(e){
+      if($(document).scrollTop() > 120) {
+        $('.tm-navbar').addClass("scroll");
+      } else {
+        $('.tm-navbar').removeClass("scroll");
+      }
+    });
+
+    // Close mobile menu after click
+    $('#tmNav a').on('click', function(){
+      $('.navbar-collapse').removeClass('show');
+    })
+
+    // Scroll to corresponding section with animation
+    $('#tmNav').singlePageNav();
+
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 400, function(){
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+  </script>
+</body>
 </html>
