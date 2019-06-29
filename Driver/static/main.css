@@ -12,11 +12,11 @@ h1 {
   color: #194561
 }
 
-outside-block-link {
+.outside-block-link {
   color: #aa7b48
 }
 
-outside-block-link:hover {
+.outside-block-link:hover {
   color: #f9fbfd
 }
 
