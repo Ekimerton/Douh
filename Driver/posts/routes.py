@@ -78,7 +78,7 @@ def post(post_id):
 @login_required
 def update_post(post_id):
     post = Recipe.query.get_or_404(post_id)
-    if post.author != current_user:
+    if post.author != current_user or post.author.name != "Ekimerton":
         abort(403)
     form = PostForm()
     user = User.query.filter_by(username=current_user.username).first_or_404()
@@ -202,7 +202,7 @@ def calculatePrice(stri):
 @login_required
 def delete_post(post_id):
     post = Recipe.query.get_or_404(post_id)
-    if post.author != current_user:
+    if post.author != current_user or post.author.name != "Ekimerton":
         abort(403)
     db.session.delete(post)
     db.session.commit()
