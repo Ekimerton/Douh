@@ -81,7 +81,7 @@ def update_post(post_id):
     if post.author != current_user and current_user.username != "Ekimerton":
         abort(403)
     form = PostForm()
-    user = User.query.filter_by(username=current_user.username).first_or_404()
+    user = User.query.filter_by(username=post.author.username).first_or_404()
     posts = Ingredient.query.filter_by(author=user)\
     .order_by(Ingredient.name.desc())
     ingredient_list = []
