@@ -9,11 +9,11 @@ a, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #194561
+  color: rgba(170,36,36,1)
 }
 
 .outside-block-link {
-  color: #aa7b48
+  rgba(255,76,76,1)
 }
 
 .outside-block-link:hover {
@@ -38,7 +38,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .article-title, .subtitle {
-  color: #194561;
+  color: rgba(170,36,36,1)
 }
 
 .site-header .navbar-nav .nav-link{
@@ -83,7 +83,7 @@ a:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 3px solid #aa7b48
+  border-bottom: 3px solid rgba(255,76,76,1)
 }
 
 .article-metadata a:hover {
