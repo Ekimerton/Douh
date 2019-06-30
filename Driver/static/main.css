@@ -5,7 +5,7 @@ body {
 }
 
 a, h2, h3, h4, h5, h6 {
-  color: #06070D;
+  color: #1f1f1f;
 }
 
 h1 {
@@ -26,7 +26,7 @@ h1 {
 
 .article-content {
   white-space: pre-line;
-  color: #06070D
+  color: #1f1f1f
 }
 
 a:hover, .article-metadata a:hover {
@@ -34,7 +34,7 @@ a:hover, .article-metadata a:hover {
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #06070D;
+  color: #1f1f1f;
 }
 
 .bg-steel {
@@ -109,6 +109,10 @@ a:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+.navbar-brand {
+  color: #1f1f1f;
 }
 
 .navbar-brand:hover {
