@@ -1,5 +1,5 @@
 body {
-  background: #181312;
+  background: linear-gradient(to right, #232526, #414345);
   color: #333333;
   margin-top: 5rem;
 }
@@ -34,7 +34,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .bg-steel {
-  background: linear-gradient(45deg, rgba(246,84,84,1) 0%, rgba(180,34,34,1) 100%);
+  background: linear-gradient(15deg, rgba(170,36,36,1) 0%, rgba(255,76,76,1) 100%);
 }
 
 .article-title, .subtitle {
@@ -46,7 +46,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .content-section {
-  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   padding: 10px 20px;
   border: 1px solid #f9fbfd;
   border-radius: 3px;
