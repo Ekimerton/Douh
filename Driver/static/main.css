@@ -112,12 +112,9 @@ a:hover {
 }
 
 .nav-brand {
+  font-size: 1.4rem;
+  font-weight: bold;
   color: #f9fbfd;
-  margin: 0;
-  position: relative;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .nav-brand:hover {
