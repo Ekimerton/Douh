@@ -46,7 +46,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .content-section {
-  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  background: linear-gradient(to right, #ece9e6, #ffffff);
   padding: 10px 20px;
   border: 1px solid #f9fbfd;
   border-radius: 3px;
