@@ -57,7 +57,7 @@ def new_post():
             ingredients_raw += ", " + str(form.ingredient10_quantity.data) + ":" + form.ingredient10.data
 
         ingredients, price = calculatePrice(ingredients_raw)
-        post = Recipe(name=form.title.data, cook_time=form.cook_time.data, num_of_people=form.people_count.data, description=form.description.data, author=current_user, ingredients=ingredients, ingredients_raw=ingredients_raw, preperation=form.preperation.data, cooking=form.cooking.data, price=round((price/form.people_count.data),2))
+        post = Recipe(name=form.title.data.capitalize(), cook_time=form.cook_time.data, num_of_people=form.people_count.data, description=form.description.data, author=current_user, ingredients=ingredients, ingredients_raw=ingredients_raw, preperation=form.preperation.data, cooking=form.cooking.data, price=round((price/form.people_count.data),2))
 
         db.session.add(post)
         db.session.commit()
@@ -128,7 +128,7 @@ def update_post(post_id):
 
         ingredients, price = calculatePrice(ingredients_raw)
 
-        post.name = form.title.data
+        post.name = form.title.data.capitalize()
         post.cook_time = form.cook_time.data
         post.num_of_people = form.people_count.data
         post.description = form.description.data
