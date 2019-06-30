@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired, InputRequired, Optional, Validation
 class PostForm(FlaskForm):
     title = StringField("Title*", validators=[DataRequired()])
     description = TextAreaField("Description*", validators=[DataRequired()])
-    cook_time = IntegerField("Time (minutes)*", validators=[DataRequired()])
+    cook_time = IntegerField("Time(min)*", validators=[DataRequired()])
     people_count = IntegerField("People*", validators=[DataRequired()])
 
     ingredient1 = SelectField('Ingredient', choices=[], validators=[InputRequired()])
