@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 {% if post.author == current_user or current_user.username == "Ekimerton" %}
-  <div class="row">
-    <a class="btn btn-secondary btn-sm mt-1 mb-1 float-right col" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a>
-    <button type="button" class="btn btn-danger btn-sm m-1 float-right col" data-toggle="modal" data-target="#deleteModal">Delete</button>
-  </div>
 {% endif %}
   <article class="media content-section">
+    <div class="row">
+      <a class="btn btn-secondary btn-sm mt-1 mb-1 float-right col mr-4" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a>
+      <button type="button" class="btn btn-danger btn-sm m-1 float-right col ml-4" data-toggle="modal" data-target="#deleteModal">Delete</button>
+    </div>
     <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
     <div class="media-body">
       <div class="article-metadata">
