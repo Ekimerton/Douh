@@ -123,3 +123,8 @@ a:hover {
 .nav-brand:hover {
   color: #1f1f1f;
 }
+
+.navbar-toggler-icon {
+  color: white;
+  padding-top: 6px;
+}
