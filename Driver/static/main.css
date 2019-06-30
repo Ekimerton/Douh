@@ -128,3 +128,9 @@ a:hover {
   color: white;
   padding-top: 6px;
 }
+
+.navbar-toggler {
+  border: 1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
