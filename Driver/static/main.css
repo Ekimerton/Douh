@@ -112,9 +112,14 @@ a:hover {
 }
 
 .nav-brand {
-  color: #1f1f1f;
+  color: #f9fbfd;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .nav-brand:hover {
-  color: #f9fbfd;
+  color: #1f1f1f;
 }
