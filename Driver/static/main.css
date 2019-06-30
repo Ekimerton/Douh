@@ -110,3 +110,7 @@ a:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+.navbar-brand:hover {
+  color: #f9fbfd;
+}
