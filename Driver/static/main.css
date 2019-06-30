@@ -34,7 +34,7 @@ a:hover, .site-header .navbar-nav .nav-link:hover, .article-metadata a:hover {
 }
 
 .bg-steel {
-  background: linear-gradient(45deg, rgba(58,101,42,1) 0%, rgba(0,32,48,1) 100%);
+  background: linear-gradient(45deg, rgba(246,84,84,1) 0%, rgba(180,34,34,1) 100%);
 }
 
 .article-title, .subtitle {
