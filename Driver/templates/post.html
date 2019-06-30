@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
 {% if post.author == current_user or current_user.username == "Ekimerton" %}
+  <div class="row media content-section">
+    <a class="btn btn-secondary btn-sm mt-1 mb-1 float-right col mr-4" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a>
+    <button type="button" class="btn btn-danger btn-sm m-1 float-right col ml-4" data-toggle="modal" data-target="#deleteModal">Delete</button>
+  </div>
 {% endif %}
   <article class="media content-section">
     <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
@@ -23,10 +27,6 @@
         <h3 class="subtitle"> Cooking </h3>
         <p class="article-content"> {{post.cooking}} </p>
       {% endif %}
-      <div class="row">
-        <a class="btn btn-secondary btn-sm mt-1 mb-1 float-right col mr-4" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a>
-        <button type="button" class="btn btn-danger btn-sm m-1 float-right col ml-4" data-toggle="modal" data-target="#deleteModal">Delete</button>
-      </div>
     </div>
   </article>
   <!-- Modal -->
