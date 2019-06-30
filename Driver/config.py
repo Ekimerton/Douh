@@ -4,6 +4,7 @@ class Config:
     # App
     SECRET_KEY = os.environ['SECRET_KEY']
     RESET_DB = os.environ['RESET_DB']
+    DEBUG = True
 
     # Database
     SQLALCHEMY_DATABASE_URI = os.environ['SQLALCHEMY_DATABASE_URI']
