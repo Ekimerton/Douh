@@ -131,3 +131,9 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
