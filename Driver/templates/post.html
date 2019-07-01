@@ -3,9 +3,8 @@
 {% if post.author == current_user or current_user.username == "Ekimerton" %}
     <div class="content-section">
       <div class="row">
-        <a class="col btn btn-secondary mt-1 mb-1" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a>
-        <div class="col"> </div>
-        <button type="button" class="col btn btn-danger mt-1 mb-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+        <a class="col btn btn-secondary m-1" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a>
+        <button type="button" class="col btn btn-danger m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
       </div>
     </div>
 {% endif %}
