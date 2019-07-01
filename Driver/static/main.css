@@ -124,7 +124,7 @@ a:hover {
 .navbar-toggler-icon {
   color: white;
   padding-top: 6px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .navbar-toggler {
