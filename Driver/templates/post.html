@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 {% if post.author == current_user or current_user.username == "Ekimerton" %}
-    <div class="row">
+    <div class="row content-section">
       <a class="col btn btn-secondary mt-1 mb-1" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a>
       <button type="button" class="col btn btn-danger m-1t" data-toggle="modal" data-target="#deleteModal">Delete</button>
     </div>
