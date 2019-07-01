@@ -29,7 +29,30 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md tm-navbar">
+      <div class="container">
+        <div class="tm-next">
+          <a href="#hero" class="navbar-brand">douh</a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <div class="navbar-nav mr-auto" id="tmNav">
+            <a class="nav-link tm-nav-link" href="#introduction">Introduction</a>
+            <a class="nav-link tm-nav-link" href="#work">Quick-Start</a>
+            <a class="nav-link tm-nav-link" href="#contact">Get Started</a>
+          </div>
+          <div class="navbar-nav">
+            <a class="nav-link tm-nav-link" href="/register">Register</a>
+            <a class="nav-link tm-nav-link" href="/login">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
       <div class="container">
         <h3><a class="align-middle m-1 navbar-brand mr-4 nav-item" href="{{ url_for('main.home') }}">douh</a></h3>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +67,6 @@
             <a class="nav-item nav-link" href="{{   url_for('users.user_ingredients', username=current_user.username) }}">My Ingredients</a>
             {% endif %}
           </div>
-          <!-- Navbar Right Side -->
           <div class="navbar-nav">
             {% if current_user.is_authenticated %}
             <a class="nav-item nav-link" href="{{   url_for('posts.new_post') }}">New Recipe</a>
@@ -57,7 +79,7 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
   </header>
   <main role="main" class="container">
     <div class="row">
